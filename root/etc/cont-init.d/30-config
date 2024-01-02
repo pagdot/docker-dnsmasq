@@ -1,0 +1,11 @@
+#!/usr/bin/with-contenv bash
+
+# make folders
+mkdir -p \
+    /config/
+
+# copy config files
+[[ ! -f /config/dnsmasq.conf ]] && \
+	cp /etc/dnsmasq.conf /config/dnsmasq.conf
+
+chown -R abc:abc /config

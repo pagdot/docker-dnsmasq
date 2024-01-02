@@ -1,0 +1,3 @@
+#!/usr/bin/with-contenv bash
+
+/usr/sbin/dnsmasq -k -u abc -g abc --no-hosts --no-resolv -C /config/dnsmasq.conf --log-facility=-

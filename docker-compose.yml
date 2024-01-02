@@ -1,0 +1,16 @@
+version: "3.4"
+
+services:
+  dnsmasq:
+    image: pagdot/dnsmasq
+    build: .
+    container_name: dnsmasq
+    restart: unless-stopped
+    volumes:
+      - ./config/:/config/
+    ports:
+      - 53:53
+    environment:
+      - PGID=1000
+      - PUID=1000
+      - TZ=Europe/London
